@@ -1,0 +1,9 @@
+.contact__icon {
+  @include flex(center, flex-start);
+  margin-top: 10px;
+  &__item {
+    font-size: 2rem;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,52 @@
+.contact {
+  padding: 0 70px;
+  &__name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+  &__img {
+    @include flex(center, center);
+    padding: 50px;
+    background: rgb(243, 242, 242);
+    gap: 0 50px;
+    margin-bottom: 50px;
+    img {
+      height: 300px;
+    }
+  }
+  &__item {
+    @include flex(flex-start, flex-start);
+    gap: 0 20px;
+    margin-bottom: 20px;
+    &__icon {
+      color: rgb(253, 176, 61);
+      font-size: 2rem;
+    }
+    &__info {
+      &__name {
+        margin-bottom: 10px;
+      }
+      &__title {
+      }
+    }
+  }
+  &__map {
+    margin-top: 100px;
+  }
+  &__footer {
+    margin-top: 50px;
+    &__name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 1rem;
+    }
+    &__policy {
+      color: rgb(245, 148, 69);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.product__card {
+  position: relative;
+  a {
+    &:hover {
+      color: $txt-main-color;
+    }
+  }
+  &__item {
+    padding: 20px;
+    border: 1px solid rgb(235, 233, 233);
+    transition: 0.3s ease;
+    &:hover {
+      box-shadow: $box-shadow;
+      transform: translateY(-5px);
+    }
+
+    &__img {
+      margin-bottom: 20px;
+    }
+    &__info {
+      margin-left: 10px;
+      &__name {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+      &__price {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        del {
+          color: rgb(250, 75, 75);
+        }
+      }
+      &__rate {
+        font-size: 1.1rem;
+        color: rgb(251, 110, 46);
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

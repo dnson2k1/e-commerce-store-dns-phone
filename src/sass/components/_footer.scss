@@ -1,0 +1,22 @@
+.footer {
+  padding-bottom: 30px;
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    min-height: 30px;
+  }
+  &__content {
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  &__logo {
+    font-size: 2rem;
+  }
+  &__paypal {
+    img {
+      height: 100px;
+    }
+  }
+}

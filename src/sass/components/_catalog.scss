@@ -1,0 +1,40 @@
+.catalog {
+  &__search {
+    max-width: 260px;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    input {
+      padding: 5px 10px;
+      min-width: 230px;
+      outline: none;
+      border: none;
+    }
+  }
+  &__filter {
+    margin-bottom: 30px;
+    text-align: center;
+    @include mobile {
+      margin-bottom: 0px;
+    }
+    button {
+      padding: 5px 25px;
+      margin-right: 20px;
+      background-color: transparent;
+      outline: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: 1px solid rgb(180, 176, 176);
+      letter-spacing: 1.5px;
+      &:hover {
+        color: $main-color;
+      }
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__content {
+    flex: 1;
+  }
+}

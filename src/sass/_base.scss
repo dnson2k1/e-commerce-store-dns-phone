@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100% !important;
+  @include tablet {
+    font-size: 80% !important;
+  }
+  // @include mobile {
+  //   font-size: 70% !important;
+  // }
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+:focus {
+  outline: 0;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  @include mobile {
+    max-width: 90%;
+  }
+}
+a:hover {
+  color: $main-color;
+}
+@each $color, $val in $colors {
+  .color-#{$color} {
+    color: $val;
+  }
+
+  .bg-#{$color} {
+    background-color: $val;
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-#{$val} {
+    grid-template-columns: repeat($val, 1fr);
+  }
+}
+@each $val in $numbers {
+  .grid-col-md-#{$val} {
+    @include tablet {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+@each $val in $numbers {
+  .grid-col-sm-#{$val} {
+    @include mobile {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+.grid {
+  display: grid;
+}
+
+.container {
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 50px;
+  margin: auto;
+
+  @include tablet {
+    padding: 0 20px;
+  }
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}
+.main {
+  margin-top: $header-height;
+  margin-bottom: 2rem;
+  min-height: 100vh;
+
+  @include tablet {
+    margin-top: calc(#{$header-tablet-height} + 20px);
+  }
+
+  @include mobile {
+    margin-top: calc(#{$header-mobile-height} + 10px);
+  }
+}
+.error {
+  display: block;
+  color: rgb(233, 42, 42);
+  margin-bottom: 10px;
+}
+.google__btn {
+  & > div {
+    margin-bottom: 10px;
+    width: 100% !important;
+    @include mobile {
+      font-size: 14px;
+      // padding: 8px 10px;
+    }
+  }
+}
+.facebook__btn {
+  span {
+    button {
+      width: 100%;
+      padding: 15px 10px;
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      color: #fff;
+      background-color: rgb(66, 133, 244);
+      outline: none;
+      border: none;
+      @include mobile {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.cart {
+  @include flex(flex-start, flex-start);
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    margin-right: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: $box-shadow;
+    top: calc(#{$header-shrink-height} + 20px);
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+      position: unset;
+    }
+    &__txt {
+      & > * {
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+      &__price {
+        @include flex(center, space-between);
+        padding: 10px 0;
+
+        span:nth-child(2) {
+          font-size: 1.3rem;
+          color: $main-color;
+          font-weight: 600;
+        }
+      }
+    }
+    &__btn {
+      & > * {
+        margin-bottom: 20px;
+      }
+      button,
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  &__list {
+    flex-grow: 1;
+    margin-right: 50px;
+  }
+  &__item {
+    @include flex(center, flex-start);
+    margin-bottom: 20px;
+    &__img {
+      margin-right: 20px;
+      img {
+        height: 150px;
+      }
+    }
+    &__info {
+      @include flex(center, space-between);
+      flex-grow: 1;
+      @include mobile {
+        @include flex(flex-start, center);
+        flex-direction: column;
+        & > * {
+          margin-bottom: 10px;
+        }
+      }
+      &__name {
+        width: 50%;
+        @include mobile {
+          width: 100%;
+        }
+      }
+      &__name,
+      &__price {
+        font-size: 1.2rem;
+      }
+      &__del {
+        font-size: 1.5rem;
+        color: rgb(248, 47, 47);
+        i {
+          cursor: pointer;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}

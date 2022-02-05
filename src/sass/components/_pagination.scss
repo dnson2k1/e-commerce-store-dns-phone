@@ -1,0 +1,17 @@
+.page {
+  @include flex(center, center);
+  margin-top: 30px;
+  &__item {
+    border: 1px solid;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: $main-color;
+  }
+  &__control {
+    @include flex(center, center);
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.7rem;
+  }
+}

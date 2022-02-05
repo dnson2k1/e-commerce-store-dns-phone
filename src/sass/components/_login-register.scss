@@ -1,0 +1,36 @@
+.login,
+.register {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 30%;
+  box-shadow: $box-shadow;
+  @include tablet {
+    max-width: 60%;
+  }
+  @include mobile {
+    max-width: 100%;
+  }
+  .login__name,
+  .register__name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgb(54, 54, 54);
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0px 0px;
+    margin-bottom: 15px;
+    &:hover {
+      color: rgb(226, 220, 220);
+    }
+  }
+  &__regis {
+    a {
+      text-decoration: underline !important;
+      color: $main-color !important;
+    }
+  }
+}

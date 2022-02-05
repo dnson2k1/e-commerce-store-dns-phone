@@ -1,0 +1,32 @@
+.policy {
+  @include flex(flex-start, flex-start);
+  color: $main-color;
+  padding: 20px 0;
+  margin-top: 50px;
+  box-shadow: $box-shadow;
+  cursor: context-menu;
+  min-height: 100px;
+  transition: 0.3s ease;
+  @include mobile {
+    min-height: 70px;
+    margin-top: 0;
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+  &:hover {
+    transform: translateY(-15px);
+  }
+  &__icon {
+    font-size: 3rem;
+    margin: 0 20px;
+  }
+  &__info {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    &__name {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+}

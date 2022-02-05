@@ -1,0 +1,25 @@
+.section {
+  margin-bottom: 80px;
+  & > * ~ * {
+    margin-top: 70px;
+  }
+  &__title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    pointer-events: none;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20%;
+      height: 3px;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background: $main-color;
+    }
+  }
+}
